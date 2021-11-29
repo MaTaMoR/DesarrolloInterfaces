@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="2dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37"/>
+
+    <View
+        android:id="@+id/vInformacion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@id/gl_h_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/informacion"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/vInformacion"
+        app:layout_constraintEnd_toEndOf="@id/vInformacion"
+        app:layout_constraintTop_toTopOf="@id/vInformacion"
+        app:layout_constraintBottom_toTopOf="@id/tvNombre"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <EditText
+        android:id="@+id/tvNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg"
+        android:fontFamily="sans-serif"
+        android:gravity="center|start"
+        android:padding="5dp"
+        android:hint="@string/nombre"
+        android:textColor="@color/gray"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@id/vInformacion"
+        app:layout_constraintStart_toStartOf="@id/vInformacion"
+        app:layout_constraintTop_toBottomOf="@id/labelInput"
+        app:layout_constraintBottom_toTopOf="@id/tvApellidos"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:inputType="textPersonName"
+        android:autofillHints="name" />
+
+    <EditText
+        android:id="@+id/tvApellidos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg"
+        android:fontFamily="sans-serif"
+        android:gravity="center|start"
+        android:padding="5dp"
+        android:hint="@string/apellidos"
+        android:textColor="@color/gray"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@id/vInformacion"
+        app:layout_constraintStart_toStartOf="@id/vInformacion"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+        app:layout_constraintBottom_toTopOf="@id/tvEmail"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:inputType="textPersonName"
+        android:autofillHints="name" />
+
+    <EditText
+        android:id="@+id/tvEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg"
+        android:fontFamily="sans-serif"
+        android:gravity="center|start"
+        android:padding="5dp"
+        android:hint="@string/correo"
+        android:textColor="@color/gray"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@id/vInformacion"
+        app:layout_constraintStart_toStartOf="@id/vInformacion"
+        app:layout_constraintTop_toBottomOf="@+id/tvApellidos"
+        app:layout_constraintBottom_toTopOf="@id/tvNacimiento"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress" />
+
+    <EditText
+        android:id="@+id/tvNacimiento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg"
+        android:fontFamily="sans-serif"
+        android:gravity="center|start"
+        android:padding="5dp"
+        android:hint="@string/nacimiento"
+        android:textColor="@color/gray"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/vInformacion"
+        app:layout_constraintEnd_toEndOf="@id/vInformacion"
+        app:layout_constraintStart_toStartOf="@id/vInformacion"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:inputType="date"
+        android:importantForAutofill="no" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <View
+        android:id="@+id/vSexo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@id/gl_h_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_h_1" />
+
+    <TextView
+        android:id="@+id/labelSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sexo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/vSexo"
+        app:layout_constraintEnd_toEndOf="@id/vSexo"
+        app:layout_constraintTop_toTopOf="@id/vSexo"
+        app:layout_constraintBottom_toTopOf="@id/rgSexo"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <RadioGroup
+        android:id="@+id/rgSexo"
+        android:scaleY="0.75"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/labelSexo"
+        app:layout_constraintStart_toStartOf="@id/vSexo"
+        app:layout_constraintEnd_toEndOf="@id/vSexo"
+        app:layout_constraintBottom_toBottomOf="@id/vSexo"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg"
+            android:layoutDirection="rtl"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/hombre"
+            android:textColor="@color/gray" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg"
+            android:layoutDirection="rtl"
+            android:layout_marginTop="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/mujer"
+            android:textColor="@color/gray" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.845" />
+
+    <View
+        android:id="@+id/vOpciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@id/gl_h_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_h_2" />
+
+    <TextView
+        android:id="@+id/labelCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/opciones"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/vOpciones"
+        app:layout_constraintBottom_toTopOf="@id/cbTerminos"
+        app:layout_constraintStart_toStartOf="@id/vOpciones"
+        app:layout_constraintEnd_toEndOf="@id/vOpciones"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <CheckBox
+        android:id="@+id/cbTerminos"
+        android:scaleY="0.8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/terminos"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        app:layout_constraintTop_toBottomOf="@id/labelCheck"
+        app:layout_constraintBottom_toTopOf="@id/cbPublicidad"
+        app:layout_constraintStart_toStartOf="@id/vOpciones"
+        app:layout_constraintEnd_toEndOf="@id/vOpciones"
+        android:textColor="@color/gray"
+        android:background="@drawable/layout_bg"
+        android:layoutDirection="rtl"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <CheckBox
+        android:id="@+id/cbPublicidad"
+        android:scaleY="0.8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/publicidad"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:layoutDirection="rtl"
+        app:layout_constraintTop_toBottomOf="@id/cbTerminos"
+        app:layout_constraintBottom_toBottomOf="@id/vOpciones"
+        app:layout_constraintStart_toStartOf="@id/vOpciones"
+        app:layout_constraintEnd_toEndOf="@id/vOpciones"
+        android:textColor="@color/gray"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <View
+        android:id="@+id/vAcciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_h_3" />
+
+    <TextView
+        android:id="@+id/labelAcciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acciones"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/vAcciones"
+        app:layout_constraintBottom_toTopOf="@id/btRegistrarse"
+        app:layout_constraintStart_toStartOf="@id/vAcciones"
+        app:layout_constraintEnd_toEndOf="@id/vAcciones"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btRegistrarse"
+        android:scaleY="0.8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/registrar"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/labelAcciones"
+        app:layout_constraintBottom_toBottomOf="@id/vAcciones"
+        app:layout_constraintStart_toStartOf="@id/vAcciones"
+        app:layout_constraintEnd_toStartOf="@id/btIniciarSesion"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:background="@drawable/layout_bg"
+        android:textColor="@color/gray"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btIniciarSesion"
+        android:scaleY="0.8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/iniciar_sesion"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/labelAcciones"
+        app:layout_constraintBottom_toBottomOf="@id/vAcciones"
+        app:layout_constraintStart_toEndOf="@id/btRegistrarse"
+        app:layout_constraintEnd_toEndOf="@id/vAcciones"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:background="@drawable/layout_bg"
+        android:textColor="@color/gray"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
