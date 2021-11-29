@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:backgroundTint="?colorSecondary"
     android:padding="2dp">
 
     <androidx.constraintlayout.widget.Guideline
@@ -12,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.37"/>
+        app:layout_constraintGuide_percent="0.40"/>
 
     <View
         android:id="@+id/vInformacion"
@@ -20,7 +21,7 @@
         android:layout_height="0dp"
         android:layout_margin="5dp"
         android:background="@drawable/layout_bg"
-        android:backgroundTint="@color/light_gray"
+        android:backgroundTint="?colorPrimary"
         app:layout_constraintBottom_toTopOf="@id/gl_h_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +34,7 @@
         android:text="@string/informacion"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="?colorSecondaryVariant"
         app:layout_constraintStart_toStartOf="@id/vInformacion"
         app:layout_constraintEnd_toEndOf="@id/vInformacion"
         app:layout_constraintTop_toTopOf="@id/vInformacion"
@@ -43,81 +45,93 @@
         android:id="@+id/tvNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="name"
         android:background="@drawable/layout_bg"
         android:fontFamily="sans-serif"
         android:gravity="center|start"
-        android:padding="5dp"
         android:hint="@string/nombre"
-        android:textColor="@color/gray"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="?colorSecondaryVariant"
+        android:backgroundTint="?colorSecondary"
+        android:textColorHint="?colorSecondaryVariant"
+        app:layout_constraintBottom_toTopOf="@id/tvApellidos"
         app:layout_constraintEnd_toEndOf="@id/vInformacion"
         app:layout_constraintStart_toStartOf="@id/vInformacion"
         app:layout_constraintTop_toBottomOf="@id/labelInput"
-        app:layout_constraintBottom_toTopOf="@id/tvApellidos"
-        app:layout_constraintVertical_chainStyle="spread"
-        android:inputType="textPersonName"
-        android:autofillHints="name" />
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
         android:id="@+id/tvApellidos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="name"
         android:background="@drawable/layout_bg"
         android:fontFamily="sans-serif"
         android:gravity="center|start"
-        android:padding="5dp"
         android:hint="@string/apellidos"
-        android:textColor="@color/gray"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="?colorSecondaryVariant"
+        android:backgroundTint="?colorSecondary"
+        android:textColorHint="?colorSecondaryVariant"
+        app:layout_constraintBottom_toTopOf="@id/tvEmail"
         app:layout_constraintEnd_toEndOf="@id/vInformacion"
         app:layout_constraintStart_toStartOf="@id/vInformacion"
         app:layout_constraintTop_toBottomOf="@+id/tvNombre"
-        app:layout_constraintBottom_toTopOf="@id/tvEmail"
-        app:layout_constraintVertical_chainStyle="spread"
-        android:inputType="textPersonName"
-        android:autofillHints="name" />
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
         android:id="@+id/tvEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="emailAddress"
         android:background="@drawable/layout_bg"
         android:fontFamily="sans-serif"
         android:gravity="center|start"
-        android:padding="5dp"
         android:hint="@string/correo"
-        android:textColor="@color/gray"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="?colorSecondaryVariant"
+        android:backgroundTint="?colorSecondary"
+        android:textColorHint="?colorSecondaryVariant"
+        app:layout_constraintBottom_toTopOf="@id/tvNacimiento"
         app:layout_constraintEnd_toEndOf="@id/vInformacion"
         app:layout_constraintStart_toStartOf="@id/vInformacion"
         app:layout_constraintTop_toBottomOf="@+id/tvApellidos"
-        app:layout_constraintBottom_toTopOf="@id/tvNacimiento"
-        app:layout_constraintVertical_chainStyle="spread"
-        android:inputType="textEmailAddress"
-        android:autofillHints="emailAddress" />
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
         android:id="@+id/tvNacimiento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/layout_bg"
         android:fontFamily="sans-serif"
         android:gravity="center|start"
-        android:padding="5dp"
         android:hint="@string/nacimiento"
-        android:textColor="@color/gray"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="?colorSecondaryVariant"
+        android:backgroundTint="?colorSecondary"
+        android:textColorHint="?colorSecondaryVariant"
         app:layout_constraintBottom_toBottomOf="@id/vInformacion"
         app:layout_constraintEnd_toEndOf="@id/vInformacion"
         app:layout_constraintStart_toStartOf="@id/vInformacion"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail"
-        app:layout_constraintVertical_chainStyle="spread"
-        android:inputType="date"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_h_2"
@@ -132,7 +146,7 @@
         android:layout_height="0dp"
         android:layout_margin="5dp"
         android:background="@drawable/layout_bg"
-        android:backgroundTint="@color/light_gray"
+        android:backgroundTint="?colorPrimary"
         app:layout_constraintBottom_toTopOf="@id/gl_h_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,6 +159,7 @@
         android:text="@string/sexo"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="?colorSecondaryVariant"
         app:layout_constraintStart_toStartOf="@id/vSexo"
         app:layout_constraintEnd_toEndOf="@id/vSexo"
         app:layout_constraintTop_toTopOf="@id/vSexo"
@@ -172,7 +187,10 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:text="@string/hombre"
-            android:textColor="@color/gray" />
+            android:textColor="?colorSecondaryVariant"
+            android:backgroundTint="?colorSecondary"
+            android:textColorHint="?colorSecondaryVariant"
+            />
 
         <RadioButton
             android:layout_width="match_parent"
@@ -183,7 +201,10 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:text="@string/mujer"
-            android:textColor="@color/gray" />
+            android:textColor="?colorSecondaryVariant"
+            android:backgroundTint="?colorSecondary"
+            android:textColorHint="?colorSecondaryVariant"
+            />
     </RadioGroup>
 
     <androidx.constraintlayout.widget.Guideline
@@ -199,7 +220,7 @@
         android:layout_height="0dp"
         android:layout_margin="5dp"
         android:background="@drawable/layout_bg"
-        android:backgroundTint="@color/light_gray"
+        android:backgroundTint="?colorPrimary"
         app:layout_constraintBottom_toTopOf="@id/gl_h_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -212,6 +233,7 @@
         android:text="@string/opciones"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="?colorSecondaryVariant"
         app:layout_constraintTop_toTopOf="@id/vOpciones"
         app:layout_constraintBottom_toTopOf="@id/cbTerminos"
         app:layout_constraintStart_toStartOf="@id/vOpciones"
@@ -232,7 +254,9 @@
         app:layout_constraintBottom_toTopOf="@id/cbPublicidad"
         app:layout_constraintStart_toStartOf="@id/vOpciones"
         app:layout_constraintEnd_toEndOf="@id/vOpciones"
-        android:textColor="@color/gray"
+        android:textColor="?colorSecondaryVariant"
+        android:backgroundTint="?colorSecondary"
+        android:textColorHint="?colorSecondaryVariant"
         android:background="@drawable/layout_bg"
         android:layoutDirection="rtl"
         app:layout_constraintVertical_chainStyle="spread"/>
@@ -252,7 +276,9 @@
         app:layout_constraintBottom_toBottomOf="@id/vOpciones"
         app:layout_constraintStart_toStartOf="@id/vOpciones"
         app:layout_constraintEnd_toEndOf="@id/vOpciones"
-        android:textColor="@color/gray"
+        android:textColor="?colorSecondaryVariant"
+        android:backgroundTint="?colorSecondary"
+        android:textColorHint="?colorSecondaryVariant"
         android:background="@drawable/layout_bg"
         app:layout_constraintVertical_chainStyle="spread"/>
 
@@ -262,11 +288,13 @@
         android:layout_height="0dp"
         android:layout_margin="5dp"
         android:background="@drawable/layout_bg"
-        android:backgroundTint="@color/light_gray"
+        android:backgroundTint="?colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gl_h_3" />
+        app:layout_constraintTop_toBottomOf="@id/gl_h_3"
+        app:layout_constraintVertical_bias="0.454" />
 
     <TextView
         android:id="@+id/labelAcciones"
@@ -275,6 +303,7 @@
         android:text="@string/acciones"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="?colorSecondaryVariant"
         app:layout_constraintTop_toTopOf="@id/vAcciones"
         app:layout_constraintBottom_toTopOf="@id/btRegistrarse"
         app:layout_constraintStart_toStartOf="@id/vAcciones"
@@ -295,7 +324,9 @@
         app:layout_constraintEnd_toStartOf="@id/btIniciarSesion"
         app:layout_constraintVertical_chainStyle="spread"
         android:background="@drawable/layout_bg"
-        android:textColor="@color/gray"/>
+        android:textColor="?colorSecondaryVariant"
+        android:backgroundTint="?colorSecondary"
+        android:textColorHint="?colorSecondaryVariant"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btIniciarSesion"
@@ -311,5 +342,7 @@
         app:layout_constraintEnd_toEndOf="@id/vAcciones"
         app:layout_constraintVertical_chainStyle="spread"
         android:background="@drawable/layout_bg"
-        android:textColor="@color/gray"/>
+        android:textColor="?colorSecondaryVariant"
+        android:backgroundTint="?colorSecondary"
+        android:textColorHint="?colorSecondaryVariant"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

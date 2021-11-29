@@ -11,4 +11,5 @@
     <color name="light_gray">#eaeded</color>
     <color name="green">#008000</color>
     <color name="limon">#bfff00</color>
+    <color name="border_gray">#B1BCBE</color>
 </resources>
