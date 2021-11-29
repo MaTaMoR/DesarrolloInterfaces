@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DesarrolloInterfaces</string>
+    <string name="nombre">Nom</string>
+    <string name="apellidos">"Noms de famille "</string>
+    <string name="nacimiento">Date de naissance</string>
+    <string name="correo">Courrier électronique</string>
+    <string name="terminos">"J'accepte les termes et conditions "</string>
+    <string name="publicidad">"J'accepte de recevoir des e-mails publicitaires "</string>
+    <string name="registrar">"Enregistrement "</string>
+    <string name="hombre">Homme</string>
+    <string name="mujer">Femme</string>
+    <string name="otros">Autre</string>
+    <string name="sexo">SEXE</string>
+    <string name="informacion">"INFORMATIONS "</string>
+    <string name="opciones">OPTIONS</string>
+    <string name="iniciar_sesion">"Commencer la session "</string>
+    <string name="acciones">ACTIONS</string>
+</resources>
